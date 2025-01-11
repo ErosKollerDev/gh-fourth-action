@@ -1,4 +1,4 @@
-name: Handle Issues
+name: 05-handle-issues
 on:
   issues:
     types: [opened, edited]
