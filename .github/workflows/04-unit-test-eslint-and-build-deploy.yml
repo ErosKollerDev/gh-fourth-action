@@ -1,5 +1,5 @@
 name: 04-unit-test-and-build
-on: [push, workflow_dispatch]
+on: [push]
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
