@@ -57,7 +57,7 @@ jobs:
         run: npm run build
       - name: Deploy to GitHub Pages
         run:
-          echo 'Not implemented yet'
+          echo 'Not implemented yet, soon will be implemented'
           # uses: peaceiris/actions-gh-pages@v3
           # with:
           #   github_token: ${{ secrets.GITHUB_TOKEN }}
