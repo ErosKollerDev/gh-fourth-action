@@ -1,7 +1,7 @@
 name: 05-handle-issues
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, closed]
 jobs:
   handle-issues:
     runs-on: ubuntu-latest
