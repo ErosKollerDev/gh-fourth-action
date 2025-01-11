@@ -41,24 +41,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-  deploy-code:
+  output:
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Get the code
-        uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm ci
-      - name: Build project
-        run: npm run build
-      - name: Deploy to GitHub Pages
-        run:
-          echo 'Not implemented yet, soon will be implemented'
-          # uses: peaceiris/actions-gh-pages@v3
-          # with:
-          #   github_token: ${{ secrets.GITHUB_TOKEN }}
-          #   publish_dir: ./dist
+      - name: Output GitHub context
+        run: echo "${{ toJSON(github) }}"
+      - name: Output information
+        run: |
+          echo "Author: ${{ github.actor }}"
+          echo "Branch: ${{ github.ref }}"
